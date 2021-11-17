@@ -73,6 +73,8 @@ class Character:
 			raise ValueError(Weapon)
 		self.__weapon = val
 
+	
+
 	# TODO: Définir getter/setter pour `hp`, qui doit être borné entre 0 et `max_hp`
 
 	@property
