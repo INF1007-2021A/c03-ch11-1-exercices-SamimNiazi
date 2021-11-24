@@ -98,11 +98,11 @@ def run_battle(c1, c2):
 
 
 def main():
-	c1 = Character("Äpik", 200, 150, 70, 70)
-	c2 = Character("Gämmor", 250, 100, 120, 60)
+	c1 = Character("Mei", 1000, 1500, 700, 700)
+	c2 = Character("David", 2, 1, 1, 6)
 
-	c1.weapon = Weapon("BFG", 100, 69)
-	c2.weapon = Weapon("Deku Stick", 120, 1)
+	c1.weapon = Weapon("my cock", 100, 69)
+	c2.weapon = Weapon("his ass", 120, 1)
 
 	turns = run_battle(c1, c2)
 	print(f"The battle ended in {turns} turns.")
