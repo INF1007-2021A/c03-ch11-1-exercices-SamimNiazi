@@ -1,68 +1,38 @@
-test_crit (__main__.TestCharacter) ... ERROR
-test_init (__main__.TestCharacter) ... ERROR
-test_name (__main__.TestCharacter) ... ERROR
-test_weapon (__main__.TestCharacter) ... ERROR
+test_crit (__main__.TestCharacter) ... FAIL
+test_init (__main__.TestCharacter) ... ok
+test_name (__main__.TestCharacter) ... ok
+test_weapon (__main__.TestCharacter) ... ok
 test_init (__main__.TestWeapon) ... ERROR
-test_name (__main__.TestWeapon) ... ERROR
+test_name (__main__.TestWeapon) ... ok
 test_unarmed (__main__.TestWeapon) ... ERROR
-
-======================================================================
-ERROR: test_crit (__main__.TestCharacter)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/samimniazi/Desktop/inf1007/c03-ch11-1-exercices-SamimNiazi/test_exercice.py", line 38, in setUp
-    self.hp_only =  Character("hp_only",  69,  1,  1,  1)
-TypeError: Character() takes no arguments
-
-======================================================================
-ERROR: test_init (__main__.TestCharacter)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/samimniazi/Desktop/inf1007/c03-ch11-1-exercices-SamimNiazi/test_exercice.py", line 38, in setUp
-    self.hp_only =  Character("hp_only",  69,  1,  1,  1)
-TypeError: Character() takes no arguments
-
-======================================================================
-ERROR: test_name (__main__.TestCharacter)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/samimniazi/Desktop/inf1007/c03-ch11-1-exercices-SamimNiazi/test_exercice.py", line 38, in setUp
-    self.hp_only =  Character("hp_only",  69,  1,  1,  1)
-TypeError: Character() takes no arguments
-
-======================================================================
-ERROR: test_weapon (__main__.TestCharacter)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/samimniazi/Desktop/inf1007/c03-ch11-1-exercices-SamimNiazi/test_exercice.py", line 38, in setUp
-    self.hp_only =  Character("hp_only",  69,  1,  1,  1)
-TypeError: Character() takes no arguments
 
 ======================================================================
 ERROR: test_init (__main__.TestWeapon)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/samimniazi/Desktop/inf1007/c03-ch11-1-exercices-SamimNiazi/test_exercice.py", line 16, in setUp
-    self.w1 = Weapon("w1", 1, 69)
-TypeError: Weapon() takes no arguments
-
-======================================================================
-ERROR: test_name (__main__.TestWeapon)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/samimniazi/Desktop/inf1007/c03-ch11-1-exercices-SamimNiazi/test_exercice.py", line 16, in setUp
-    self.w1 = Weapon("w1", 1, 69)
-TypeError: Weapon() takes no arguments
+  File "/Users/samimniazi/Desktop/inf1007/c03-ch11-1-exercices-SamimNiazi/test_exercice.py", line 28, in test_init
+    self.assertEqual(self.w3.min_level, 42)
+AttributeError: 'Weapon' object has no attribute 'min_level'
 
 ======================================================================
 ERROR: test_unarmed (__main__.TestWeapon)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/samimniazi/Desktop/inf1007/c03-ch11-1-exercices-SamimNiazi/test_exercice.py", line 16, in setUp
-    self.w1 = Weapon("w1", 1, 69)
-TypeError: Weapon() takes no arguments
+  File "/Users/samimniazi/Desktop/inf1007/c03-ch11-1-exercices-SamimNiazi/test_exercice.py", line 33, in test_unarmed
+    self.assertEqual(self.w4.min_level, 1)
+AttributeError: 'Weapon' object has no attribute 'min_level'
+
+======================================================================
+FAIL: test_crit (__main__.TestCharacter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 1337, in patched
+    return func(*newargs, **newkeywargs)
+  File "/Users/samimniazi/Desktop/inf1007/c03-ch11-1-exercices-SamimNiazi/test_exercice.py", line 77, in test_crit
+    self.assertFalse(crit)
+AssertionError: 1 is not false
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.001s
+Ran 7 tests in 0.041s
 
-FAILED (errors=7)
+FAILED (failures=1, errors=2)
